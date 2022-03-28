@@ -1,0 +1,7 @@
+{
+	"name": "Python",
+	"dockerFile": "Dockerfile",		// Dockerfileでイメージ・コンテナを作成
+	"extensions": [					//リモート先のVS Codeにインストールする拡張機能
+		"ms-python.python"
+	]
+}
