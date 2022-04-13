@@ -1,1 +1,6 @@
-FROM python:3.6
+FROM node:12
+
+RUN mkdir -p /backend
+WORKDIR /forntend
+
+EXPOSE 3000

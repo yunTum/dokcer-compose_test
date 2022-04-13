@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.conf.urls import url
 from django.urls import path, include
 from APP.urls import router as APP_router
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView # Schema view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^api/', include(APP_router.urls))
+    url(r'^api/', include(APP_router.urls)),
+    path('schema/', SpectacularAPIView.as_view(), name='schema'),                                       # Download Schema.yaml
+    path('schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),   # Schema view
 ]

@@ -1,12 +1,11 @@
-FROM python:3.8
-LABEL architecture="Aonuma" 
+FROM python:3.9.0
 
 ENV PYTHONUNBUFFERED true
 
-RUN mkdir -p /app
-WORKDIR /app
+RUN mkdir -p /backend
+WORKDIR /backend
 
-ADD requirements.txt /app/
+ADD requirements.txt /backend/
 
 RUN pip3 install -r requirements.txt
 
